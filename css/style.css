@@ -212,8 +212,8 @@ main p {
   transform-origin: 0 50%;
   -webkit-transition-property: transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
@@ -732,6 +732,9 @@ footer {
 .page-links img {
 	height: 11px;
 }
+.about-main-section {
+	padding: 0 15px;
+}
 .about-main {
 	margin: 50px auto 0;
 	text-align: left;
@@ -821,7 +824,7 @@ footer {
 	height: 100%;
 	background: rgba(250, 250, 250, 0.4);
 	text-align: center;
-	padding: 115px 0 65px;
+	padding: 115px 20px 65px;
 }
 .flower-pot h2 {
 	color: white;
@@ -855,10 +858,12 @@ footer {
 	display: flex;
 	position: relative;
 	overflow: hidden;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .instagram img {
-	height: 152px;
-	width: 160px;
+	max-height: 152px;
+	width: 12.5%;
 }
 .instagram-follow {
 	position: absolute;
@@ -940,7 +945,7 @@ footer {
 }
 .map-form {
 	width: 850px;
-	padding-bottom: 90px;
+	padding: 0 20px 90px;
 	margin: 0 auto;
 	display: flex;
 }
@@ -1030,6 +1035,9 @@ label {
 		width: 100%;
 		padding-left: 264px;
 	}
+	.arrival-item {
+		margin-bottom: 60px;
+	}
 	.arrows1 {
 		top: 94px;
 		right: 61px;
@@ -1075,6 +1083,13 @@ label {
 	.contact-main, .contact-container {
 		width: 95%;
 	}
+	.instagram-container {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	.instagram img {
+		width: 25%;
+	}
 
 }
 @media screen and (max-width: 880px) {
@@ -1102,12 +1117,10 @@ label {
 	}
 	.free-item {
 		margin-top: 10px;
+		border-right: none;
 	}
 	.map-form {
 		width: 100%;
-	}
-	.map {
-		display: none;
 	}
 	.form {
 		margin: 0 auto;
@@ -1140,6 +1153,17 @@ label {
 	}
 	.instagram-follow {
 		left: 50px;
+	}
+	.map-form {
+		flex-direction: column;
+	}
+	.map {
+		height: 350px;
+		margin: 25px auto;
+		order: 2;
+	}
+	.form {
+		padding: 0;
 	}
 }
 @media screen and (max-width: 670px) {
@@ -1216,6 +1240,9 @@ label {
 		border-right: none;
 		border-left: none;
 	}
+	.flower-pot h2 {
+		font-size: 18px;
+	}
 }
 @media screen and (max-width: 480px) {
 	.feature-container, .arrivals-container {
@@ -1250,8 +1277,27 @@ label {
 	.blog-content p {
 		font-size: 10px;
 	}
+	.about-main {
+		height: 330px;
+	}
+	.about-main p {
+		font-size: 12px;
+		right: 20px;
+	}
+	.map, .form {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 455px) {
+	.footer-top {
+		padding: 11px 10px;
+	}
+	.login-nav li {
+		margin-right: 8px;
+	}
+	.lang-nav li {
+		margin-left: 8px;
+	}
 	.decor-container {
 		justify-content: space-around;
 	}
@@ -1265,4 +1311,84 @@ label {
 	.arrivals-container {
 		justify-content: space-around;
 	}
+	.feature-nav {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: center;
+	}
+	.feature-nav li {
+		margin-right: 0;
+		width: 50%;
+	}
+	.decor-container .decor-item:nth-child(odd) {
+		margin-right: 15px;
+	}
+	.arrows1 {
+		top: 54px;
+		right: 54%;
+	}
+	.arrows2 {
+		top: 54px;
+		left: 54%;
+	}
+	.blog-item.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.date1 h5 {
+		right: 11px;
+	}
+	.blog-content {
+		width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.instagram-container {
+		width: 90%;
+	}
+	.instagram img {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 405px) {
+	.free-container {
+		width: 100%;
+		justify-content: center;
+	}
+	.free-item a {
+		width: 212px;
+		height: 277px;
+	}
+}
+@media screen and (max-width: 390px) {
+	.main-logo {
+		width: 100%;
+	}
+	.main-logo img {
+		width: 90%;
+	}
+	.welcome-container {
+		width: 100%;
+		justify-content: center;
+	}
+	.welcome-container img {
+		width: 285px;
+		height: 177px;
+	}
+	.decor-item img {
+		height: inherit;
+		width: 224px;
+	}
+	.decor-container .decor-item:nth-child(odd) {
+		margin-right: 0;
+	}
+	.main-arrival h1 {
+		font-size: 20px;
+	}
+	.main-arrival a {
+		padding: 0;
+		display: block;
+	}
+
 }
